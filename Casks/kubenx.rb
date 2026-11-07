@@ -1,9 +1,9 @@
 cask "kubenx" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.1.7"
-  sha256 arm:   "31094b7b7006820ce721771449dc9374c19a8a3d40ec81b232e4116c85cd666b",
-         intel: "139adaaa03441e87ac36783da972f5b0417071b3addecea6ad124a997fe2b2a5"
+  version "0.1.8"
+  sha256 arm:   "751f151280dfb984d3e400483a14e4051435ca96bb77328f14b6469e4a00f3af",
+         intel: "2a1dc6e747be7ef0a60fc006c993ef738b80088d160d9081f928b501ddf53b8d"
 
   url "https://dl.kubenx.app/v#{version}/kubenx-#{version}-macos-#{arch}.dmg"
   name "KubeNx"
