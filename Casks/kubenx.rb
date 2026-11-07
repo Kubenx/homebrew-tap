@@ -21,8 +21,9 @@ cask "kubenx" do
 
   app "KubeNx.app"
 
-  # The app is not notarized; without this Gatekeeper reports it as damaged.
+  # The app is not notarized: sign it ad hoc on this Mac and drop quarantine so Gatekeeper lets it open.
   postflight_steps do
+    run "/usr/bin/codesign", args: ["--force", "--deep", "--sign", "-", "{{appdir}}/KubeNx.app"]
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/KubeNx.app"]
   end
 
